@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'ProximaNova';
+    src: url('../fonts/ProximaNova/proximanova_light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ProximaNova';
+    src: url('../fonts/ProximaNova/proximanova_regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ProximaNova';
+    src: url('../fonts/ProximaNova/proximanova_bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ProximaNova';
+    src: url('../fonts/ProximaNova/proximanova_boldit.woff2') format('woff2');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ProximaNova';
+    src: url('../fonts/ProximaNova/proximanova_extrabold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ProximaNova';
+    src: url('../fonts/ProximaNova/proximanova_black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ProximaNova';
+    src: url('../fonts/ProximaNova/proximanova_blackit.woff2') format('woff2');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+:root {
+    /* шрифты проекта */
+    --font-main: 'ProximaNova', sans-serif;
+
+    /* цвета проекта */
+    --honeydew: #e5f4e3;
+    --argentinian-blue: #5da9e9;
+    --marian-blue: #003f91;
+    --white: #ffffff;
+    --finn: #6d326d;
+}
+
+html {
+    background-color: transparent;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--font-main);
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.4;
+    color: #717171;
+    background-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+/*X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {}
+
+/*Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {}
+
+/*Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {}
+
+/*Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {}
+
+/*X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {}
