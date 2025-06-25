@@ -65,21 +65,36 @@
     --color3: #282a2b;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+}
+
 html {
     background-color: transparent;
-    overflow-x: hidden;
+    height: 100%;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     font-family: var(--font-main);
     font-size: 16px;
     font-weight: normal;
     line-height: 1.4;
+    min-height: 100%;
     color: #717171;
     background-color: transparent;
     -webkit-font-smoothing: antialiased;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+}
+
+main {
+    min-height: 0;
+    flex-grow: 1;
 }
 
 .footer__wrapper {
@@ -112,8 +127,11 @@ body {
 
 .footer__top {
     display: flex;
-    justify-content: space-between;
-    padding: 0 0 3%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px;
+    padding: 0 0 2%;
 }
 
 .footer__bottom {
@@ -123,17 +141,27 @@ body {
     justify-content: center;
     font-size: 0.875rem;
     font-weight: 400;
-    row-gap: 6px;
+    row-gap: 10px;
 }
 
 .footer__column_logo {
     display: flex;
-    width: 30%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 20px;
+    width: 60%;
+}
+
+.footer__logo_description {
+    font-size: 0.975rem;
 }
 
 .footer__column_contacts {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     font-size: 1.25rem;
     font-weight: 500;
     width: 70%;
@@ -150,38 +178,69 @@ body {
     width: 50%;
 }
 
-.footer__widget {
-    display: flex;
-}
-
 .footer__documents {
     display: flex;
+    flex-direction: row;
     gap: 10px;
 }
 
-.footer__documents a:last-child::before {
+.footer__documents a:nth-child(2):before {
     content: "|";
 }
 
 .icon {
-    display: flex;
-    align-items: center;
     width: 30px;
     height: 30%;
 }
 
-
-/* Очень маленькие устройства (портретные телефоны, менее 576px) */
-@media (max-width: 575.98px) {}
-
-/* Маленькие устройства (горизонтальные телефоны, менее 768px) */
-@media (max-width: 767.98px) {}
-
-/* Средние устройства (планшеты, менее 992px) */
-@media (max-width: 991.98px) {}
+/* Очень большие устройства (большие десктопы, менее 1400px) */
+@media (max-width: 1399.98px) {}
 
 /* Большие устройства (десктопы, менее 1200px) */
 @media (max-width: 1199.98px) {}
 
-/* Очень большие устройства (большие десктопы, менее 1400px) */
-@media (max-width: 1399.98px) {}
+/* Средние устройства (планшеты, менее 992px) */
+@media (max-width: 991.98px) {
+    .icon {
+        width: 26px;
+        height: 26px;
+    }
+
+    .footer__top {
+        justify-content: start;
+        row-gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .footer__logo_description {
+        text-align: center;
+    }
+
+    .footer__column_contacts {
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 20px;
+        row-gap: 24px;
+    }
+
+    .footer__contacts-phones {
+        justify-content: start;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .footer__bottom {
+        text-align: center;
+        row-gap: 20px;
+    }
+
+    .footer__documents {
+        text-align: center;
+    }
+}
+
+/* Маленькие устройства (горизонтальные телефоны, менее 768px) */
+@media (max-width: 767.98px) {}
+
+/* Очень маленькие устройства (портретные телефоны, менее 576px) */
+@media (max-width: 575.98px) {}
