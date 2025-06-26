@@ -54,18 +54,13 @@
     --font-main: 'ProximaNova', sans-serif;
 
     /* цвета проекта */
-    --honeydew: #e5f4e3;
-    --argentinian-blue: #5da9e9;
-    --marian-blue: #003f91;
-    --white: #ffffff;
-    --finn: #6d326d;
-
-    --color1: #dfe1e2;
-    --color2: #fff;
-    --color3: #282a2b;
+    --footer-text-color: #dfe1e2;
+    --footer-link-hover-color: #fff;
+    --footer-bg-color: #282a2b;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -98,21 +93,25 @@ main {
 }
 
 .footer__wrapper {
-    background-color: var(--color3);
-    color: var(--color1);
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
 }
 
-.footer__link {
-    color: var(--color1);
-    text-decoration: none;
-    font-weight: 400;
+.footer__widget .footer__link {
     display: flex;
     align-items: center;
     gap: 14px;
 }
 
+.footer__link {
+    color: var(--footer-text-color);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+
 .footer__link:hover {
-    color: var(--color2);
+    color: var(--footer-link-hover-color);
 }
 
 .logo_footer {
@@ -131,7 +130,6 @@ main {
     justify-content: center;
     align-items: center;
     row-gap: 30px;
-    padding: 0 0 2%;
 }
 
 .footer__bottom {
@@ -142,6 +140,9 @@ main {
     font-size: 0.875rem;
     font-weight: 400;
     row-gap: 10px;
+    margin-top: 30px;
+    padding-top: 16px;
+    border-top: 1px solid #ffffff80;
 }
 
 .footer__column_logo {
@@ -163,7 +164,6 @@ main {
     justify-content: space-around;
     align-items: center;
     font-size: 1.25rem;
-    font-weight: 500;
     width: 70%;
 }
 
@@ -178,14 +178,14 @@ main {
     width: 50%;
 }
 
-.footer__documents {
+.footer-bottom__list {
+    list-style-type: none;
     display: flex;
-    flex-direction: row;
-    gap: 10px;
 }
 
-.footer__documents a:nth-child(2):before {
+.footer-bottom__list li:not(:last-child)::after {
     content: "|";
+    margin: 0 .5rem;
 }
 
 .icon {
@@ -209,7 +209,6 @@ main {
     .footer__top {
         justify-content: start;
         row-gap: 20px;
-        margin-bottom: 20px;
     }
 
     .footer__logo_description {
@@ -243,4 +242,13 @@ main {
 @media (max-width: 767.98px) {}
 
 /* Очень маленькие устройства (портретные телефоны, менее 576px) */
-@media (max-width: 575.98px) {}
+@media (max-width: 575.98px) {
+    /* .footer-bottom__list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-bottom__list li:not(:last-child)::after {
+        content: "";
+    } */
+}
